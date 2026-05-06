@@ -50,9 +50,9 @@ const About = () => {
       <div className="flex flex-col items-center justify-between gap-16 px-10 pb-16 text-xl font-light tracking-wide lg:flex-row md:text-2xl lg:text-3xl text-white/60">
         <img
           ref={imgRef}
-          src="images/man.jpg"
-          alt="man"
-          className="w-md rounded-3xl"
+          src="images/IMG_20260506_005014_658.webp"
+          alt={import.meta.env.VITE_USER_NAME || "Shaurya"}
+          className="w-md rounded-3xl grayscale hover:grayscale-0 transition-all duration-500 ease-in-out cursor-pointer"
         />
         <AnimatedTextLines text={aboutText} className={"w-full"} />
       </div>

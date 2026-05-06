@@ -1,4 +1,4 @@
-# 🌐 3D Awwwards-Level Developer Portfolio
+# 🌐 Shaurya Kumar's Portfolio
 
 ### Built with React, GSAP, Three.js, TailwindCSS
 

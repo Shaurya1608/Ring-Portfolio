@@ -113,10 +113,13 @@ const Works = () => {
         onMouseMove={handleMouseMove}
       >
         {projects.map((project, index) => (
-          <div
+          <a
             key={project.id}
+            href={project.href}
+            target="_blank"
+            rel="noopener noreferrer"
             id="project"
-            className="relative flex flex-col gap-1 py-5 cursor-pointer group md:gap-0"
+            className="relative flex flex-col gap-1 py-5 cursor-pointer group md:gap-0 block"
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave(index)}
           >
@@ -149,7 +152,7 @@ const Works = () => {
               ))}
             </div>
             {/* mobile preview image */}
-            <div className="relative flex items-center justify-center px-10 md:hidden h-[400px]">
+            <div className="relative flex items-center justify-center px-10 md:hidden h-[250px]">
               <img
                 src={project.bgImage}
                 alt={`${project.name}-bg-image`}
@@ -158,15 +161,15 @@ const Works = () => {
               <img
                 src={project.image}
                 alt={`${project.name}-image`}
-                className="absolute bg-center px-14 rounded-xl"
+                className="absolute bg-center px-10 rounded-xl"
               />
             </div>
-          </div>
+          </a>
         ))}
         {/* desktop Flaoting preview image */}
         <div
           ref={previewRef}
-          className="fixed -top-2/6 left-0 z-50 overflow-hidden border-8 border-black pointer-events-none w-[960px] md:block hidden opacity-0"
+          className="fixed -top-2/6 left-0 z-50 overflow-hidden border-4 border-black pointer-events-none w-[500px] md:block hidden opacity-0"
         >
           {currentIndex !== null && (
             <img

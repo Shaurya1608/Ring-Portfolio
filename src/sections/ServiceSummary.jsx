@@ -34,29 +34,29 @@ const ServiceSummary = () => {
     });
   });
   return (
-    <section className="mt-20 overflow-hidden font-light leading-snug text-center mb-42 contact-text-responsive">
-      <div id="title-service-1">
-        <p>Architucture</p>
+    <section className="mt-32 overflow-hidden font-light leading-none text-center mb-42 contact-text-responsive font-syne uppercase tracking-tighter">
+      <div id="title-service-1" className="opacity-80">
+        <p>Architecture</p>
       </div>
       <div
         id="title-service-2"
-        className="flex items-center justify-center gap-3 translate-x-16"
+        className="flex items-center justify-center gap-6 translate-x-16"
       >
-        <p className="font-normal">Development</p>
-        <div className="w-10 h-1 md:w-32 bg-gold" />
-        <p>Deployment</p>
+        <p className="font-bold text-gold">Development</p>
+        <div className="w-12 h-1 md:w-40 bg-black/20" />
+        <p className="opacity-60">Deployment</p>
       </div>
       <div
         id="title-service-3"
-        className="flex items-center justify-center gap-3 -translate-x-48"
+        className="flex items-center justify-center gap-6 -translate-x-48"
       >
-        <p>APIs</p>
-        <div className="w-10 h-1 md:w-32 bg-gold" />
-        <p className="italic">Frontends</p>
-        <div className="w-10 h-1 md:w-32 bg-gold" />
-        <p>Scalability</p>
+        <p className="opacity-60">APIs</p>
+        <div className="w-12 h-1 md:w-32 bg-gold" />
+        <p className="italic font-bold">Frontends</p>
+        <div className="w-12 h-1 md:w-32 bg-gold" />
+        <p className="opacity-60 text-pretty">Scalability</p>
       </div>
-      <div id="title-service-4" className="translate-x-48">
+      <div id="title-service-4" className="translate-x-48 opacity-80">
         <p>Databases</p>
       </div>
     </section>

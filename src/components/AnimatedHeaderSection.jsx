@@ -43,7 +43,7 @@ const AnimatedHeaderSection = ({
       <div style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }}>
         <div
           ref={headerRef}
-          className="flex flex-col justify-center gap-12 pt-16 sm:gap-16"
+          className="flex flex-col justify-center gap-12 pt-16 pb-4 sm:gap-16"
         >
           <p
             className={`text-sm font-light tracking-[0.5rem] uppercase px-10 ${textColor}`}
@@ -52,7 +52,7 @@ const AnimatedHeaderSection = ({
           </p>
           <div className="px-10">
             <h1
-              className={`flex flex-col gap-12 uppercase banner-text-responsive sm:gap-16 md:block ${textColor}`}
+              className={`flex flex-col gap-12 uppercase banner-text-responsive sm:gap-16 md:block font-syne ${textColor}`}
             >
               {titleParts.map((part, index) => (
                 <span key={index}>{part} </span>

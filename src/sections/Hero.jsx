@@ -12,7 +12,7 @@ results driven webs/apps`;
     <section id="home" className="flex flex-col justify-end min-h-screen">
       <AnimatedHeaderSection
         subTitle={"404 No Bugs Found"}
-        title={"Ali Sanati"}
+        title={import.meta.env.VITE_USER_FULL_NAME || "Shaurya Kumar"}
         text={text}
         textColor={"text-black"}
       />

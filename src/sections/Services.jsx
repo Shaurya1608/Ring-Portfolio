@@ -42,30 +42,33 @@ const Services = () => {
           style={
             isDesktop
               ? {
-                  top: `calc(10vh + ${index * 5}em)`,
-                  marginBottom: `${(servicesData.length - index - 1) * 5}rem`,
+                  top: `calc(5vh + ${index * 4}rem)`,
+                  marginBottom: `${(servicesData.length - index - 1) * 3}rem`,
                 }
               : { top: 0 }
           }
         >
-          <div className="flex items-center justify-between gap-4 font-light">
-            <div className="flex flex-col gap-6">
-              <h2 className="text-4xl lg:text-5xl">{service.title}</h2>
-              <p className="text-xl leading-relaxed tracking-widest lg:text-2xl text-white/60 text-pretty">
+          <div className="flex items-center justify-between gap-2">
+            <div className="flex flex-col w-full gap-4">
+              <h2 className="text-3xl lg:text-5xl font-syne uppercase tracking-tight">{service.title}</h2>
+              <p className="max-w-3xl text-base lg:text-lg text-white/50 font-outfit leading-relaxed">
                 {service.description}
               </p>
-              <div className="flex flex-col gap-2 text-2xl sm:gap-4 lg:text-3xl text-white/80">
+              <div className="flex flex-col mt-2">
                 {service.items.map((item, itemIndex) => (
-                  <div key={`item-${index}-${itemIndex}`}>
-                    <h3 className="flex">
-                      <span className="mr-12 text-lg text-white/30">
+                  <div 
+                    key={`item-${index}-${itemIndex}`}
+                    className="group/item py-3 border-t border-white/10 transition-all duration-500 hover:bg-white/5 hover:px-4 cursor-default"
+                  >
+                    <h3 className="flex items-baseline text-xl lg:text-2xl transition-colors duration-500 group-hover/item:text-gold font-outfit">
+                      <span className="mr-6 text-xs font-light text-white/20 font-syne group-hover/item:text-gold/50">
                         0{itemIndex + 1}
                       </span>
                       {item.title}
                     </h3>
-                    {itemIndex < service.items.length - 1 && (
-                      <div className="w-full h-px my-2 bg-white/30" />
-                    )}
+                    <p className="ml-10 mt-1 text-xs lg:text-sm text-white/30 group-hover/item:text-white/60 transition-colors duration-500 max-w-2xl">
+                      {item.description}
+                    </p>
                   </div>
                 ))}
               </div>
